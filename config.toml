@@ -1,34 +1,75 @@
-baseurl = "https://nipbusters.github.io"
-title = "Mainroad"
+baseURL = "https://nipbusters.github.io"
 languageCode = "en-us"
-paginate = "10" # Number of posts per page
-theme = "Mainroad"
-disqusShortname = "" # Enable comments by entering your Disqus shortname
-googleAnalytics = "" # Enable Google Analytics by entering your tracking id
+title = "TestSpace"
+description = ""
+theme = "min_night"
+disqusShortname = ""
+googleAnalytics = ""
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "public/"]
 publishDir = "../nipbusters.github.io"
 
-[Author]
-  name = "John Doe"
-  bio = "John Doe's true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it."
-  avatar = "img/avatar.png"
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
 
-[Params]
-  subtitle = "Just another site" # Subtitle of your site
-  description = "John Doe's Personal blog about everything" # Description of your site
-  opengraph = true
-  twitter_cards = false
-  readmore = false # Show "Read more" button in list if true
-  authorbox = true
-  post_navigation = true
-  postSections = ["post"]
+[params]
+    author = "Nate Day"
+    description = "An easy reading Hugo blog with night-mode."
+    logo = "favicon/android-chrome-192x192.png"
+    twitterAuthor = "@natedayta"
+    githubUsername = "nathancday"
+    accent = "#386890" # dark colors do best
+    backgroundColor = "#f5f5f5"
+    font = "Mina" # should match the name on Google Fonts!
+    highlight = true
+    highlightStyle = "lakeside-light" # make this match accent
+    highlightLanguages = ["r", "bash", "go"]
 
-[Params.sidebar]
-  home = "right"   # Configure layout for home page
-  list = "right"   # Configure layout for list pages
-  single = "right" # Configure layout for single pages
-  # Enable widgets in given order
-  widgets = ["search", "recent", "categories", "taglist"]
+# adjust these as you see fit
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
 
-[Params.widgets]
-  recent_num = 5 # Set the number of articles in the "Recent articles" widget
-  tags_counter = false # Enable counter for each tag in "Tags" widget (disabled by default)
+[[menu.main]]
+    url = "/post/"
+    name = "Posts"
+    weight = 2
+
+[[menu.main]]
+    url = "/project/"
+    name = "Projects"
+    weight = 3
+    
+[[menu.main]]
+    url = "/tags/"
+    name = "Tags"
+    weight = 4
+
+# Social icons to be shown on the right-hand side of the navigation bar
+# The "name" field should match the name of the icon to be used
+# The list of available icons can be found at http://fontawesome.io/icons/
+
+[[menu.icon]]
+    url = "mailto:nathancday@gmail.com"
+    name = "envelope-o"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/NathanCDay"
+    name = "github"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://twitter.com/natedayta/"
+    name = "twitter"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/nathan-day-59b48435/"
+    name = "linkedin"
+    weight = 4
+
+[[menu.icon]]
+    url = "https://www.stackoverflow.com/users/5878751/nate"
+    name = "stack-overflow"
+    weight = 5
